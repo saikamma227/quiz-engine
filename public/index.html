@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz App</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background: #ff9800;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Quiz App</h1>
+  <input id="name" placeholder="Enter your name" />
+  <br>
+  <button onclick="startQuiz()">Start Quiz</button>
+
+  <script>
+    function startQuiz() {
+      const name = document.getElementById('name').value;
+      localStorage.setItem('name', name);
+      window.location = 'quiz.html';
+    }
+  </script>
+</body>
+</html>

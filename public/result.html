@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #e3f2fd;
+      padding-top: 100px;
+    }
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2196F3;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Quiz Result</h1>
+  <h2 id="result"></h2>
+
+  <a id="download" target="_blank">Download Certificate</a>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem('result'));
+
+    document.getElementById('result').innerText =
+      `Score: ${data.score}/${data.total}`;
+
+    document.getElementById('download').href = data.certificate;
+  </script>
+
+</body>
+</html>
